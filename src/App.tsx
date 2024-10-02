@@ -1,4 +1,4 @@
-import { Container, createTheme, CssBaseline, Paper, ThemeProvider, Typography } from '@mui/material'
+import { Container, createTheme, CssBaseline, Paper, Stack, ThemeProvider, Typography } from '@mui/material'
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
@@ -17,9 +17,20 @@ function App() {
             <ThemeProvider theme={theme}>
                 <Paper elevation={0}>
                     <Container maxWidth="sm" sx={{ margin: '100px auto 50px' }}>
-                        <Typography component="h1" variant="h4" sx={{ mb: 3 }}>
-                            Cafetería UNLaM
-                        </Typography>
+                        <Stack
+                            spacing={2}
+                            direction="row"
+                            justifyContent="space-between"
+                            alignItems="baseline"
+                            sx={{ mb: 3 }}
+                        >
+                            <Typography component="h1" variant="h4">
+                                Cafetería UNLaM
+                            </Typography>
+                            <Typography variant='body2' color='textSecondary'>
+                                {import.meta.env.BUILD_DATE}
+                            </Typography>
+                        </Stack>
                         <OrderList />
                     </Container>
                 </Paper>
