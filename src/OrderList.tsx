@@ -12,7 +12,7 @@ export const OrderList: React.FC = () => {
     const [orders, setOrders] = useState<Order[]>([]);
 
     const handleRefreshClick = () => {
-        axios.get('http://localhost:3000/orders')
+        axios.get('https://unlam-vh-api.azurewebsites.net/orders')
             .then(response => {
                 setOrders(response.data);
             })
