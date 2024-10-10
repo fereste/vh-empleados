@@ -25,7 +25,7 @@ function App() {
                             sx={{ mb: 3 }}
                         >
                             <Typography component="h1" variant="h4">
-                                Cafetería UNLaM 2024
+                                Cafetería UNLaM
                             </Typography>
                             <Typography variant='body2' color='textSecondary'>
                                 {import.meta.env.BUILD_DATE}
